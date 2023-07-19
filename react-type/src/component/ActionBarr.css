@@ -1,0 +1,11 @@
+.action-barr{
+    position: absolute;
+    right: 0;
+    top: 0;
+    opacity: 0;
+    transition: all 0.5s;
+}
+.action-barr:hover{
+    opacity: 1;
+    background-color: blue;
+}

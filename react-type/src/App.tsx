@@ -1,14 +1,19 @@
-import React from 'react';
-import './App.css';
-import { RepositoryList } from './component/Repository.list';
-function App() {
-  return (
-    <div >
-      <h1>Search for a Package</h1>
-      <RepositoryList/>
-    </div>
+import React, { useEffect } from "react";
+import { startServiceBundler } from "./utils";
+import { CellList } from "./component";
+import "./App.css";
 
+const App: React.FC = () => {
+  useEffect(() => {
+    startServiceBundler();
+    return;
+  }, []);
+
+  return (
+    <div className="containers">
+      <CellList />
+    </div>
   );
-}
+};
 
 export default App;
